@@ -232,6 +232,7 @@ class Game {
         this.showElement('start-menu', false);
         this.showElement('game-over', false);
         this.showElement('hud', true);
+        this.showElement('mute-button', true);
         
         // Resume music if paused
         this.audio.resumeMusic();
@@ -258,6 +259,7 @@ class Game {
         // Show game over after animation
         setTimeout(() => {
             this.showElement('hud', false);
+            this.showElement('mute-button', false);
             this.showElement('game-over', true);
             
             document.getElementById('final-score').textContent = Utils.formatScore(this.score);
